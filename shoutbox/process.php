@@ -13,7 +13,7 @@ include '../database/connectie.php';
             exit();
         } else {
 
-            if($bericht == '/clear'){
+            if($bericht == '/clear' && $gebruiker == 'sAF3uvkzdobiU2fNiRGoLEHDC3HG'){
                 $query = "TRUNCATE TABLE shoutbox";
                 
                 if (!mysqli_query($con, $query)) {
