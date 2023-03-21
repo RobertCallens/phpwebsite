@@ -12,6 +12,18 @@ include '../database/connectie.php';
             header("Location: ../shoutbox.php?fout=".urlencode($error));
             exit();
         } else {
+
+            if(bericht == '/clear'){
+                $query = "TRUNCATE TABLE shoutbox";
+                
+                if (!mysqli_query($con, $query)) {
+                    die('Fout: ' . mysqli_error($con));
+                } else {
+                    header("Location: ../shoutbox.php");
+                    exit();
+                }
+            }
+
             $query = "INSERT INTO shoutbox (gebruiker, bericht) VALUES ('$gebruiker', '$bericht')";
 
             if (!mysqli_query($con, $query)) {
