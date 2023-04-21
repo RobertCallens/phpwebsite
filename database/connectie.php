@@ -1,6 +1,6 @@
 <?php
 // connectie - verbinding met MySQL-database
-    $con = mysqli_connect("78.47.104.170:3309","root","03bb1f1adbd842f34f41","school");
+    $con = mysqli_connect("dedi7339.your-server.de","b05robert_75","eaVnTQk6hqeeTG4n","b05robert_db");
 
     // de connectie testen met foutmelding als de verbinding niet is gelukt
     if(mysqli_connect_errno()){
